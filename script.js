@@ -27,7 +27,7 @@ function nextPhoto() {
     }
 
     document.getElementById("memoryPhoto").src =
-        "./images/photo" + currentPhoto + ".jpeg";
+        "photo" + currentPhoto + ".jpeg";
 
     const photoNumber = document.getElementById("photoNumber");
 
