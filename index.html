@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Harshiii 💗</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- PAGE 1: GIFT BOX -->
+    <section id="giftPage" class="page active">
+
+        <div class="birthday-container">
+
+            <h1>🎀 A Special Gift For You 🎀</h1>
+
+            <p class="date">14 October 2026</p>
+
+            <div class="gift" onclick="openGift()">
+                <div class="gift-lid"></div>
+                <div class="gift-bow">🎀</div>
+                <div class="gift-box">🎁</div>
+            </div>
+
+            <p>Tap the gift to open it! 💝</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2: BIRTHDAY WISH -->
+    <section id="wishPage" class="page">
+
+        <div id="birthdayMessage">
+
+            <div class="dolls">🎀 🧸 🎂 🧸 🎀</div>
+
+            <h1>Happy Birthday Harshiii! 💖</h1>
+
+            <p>
+                Wishing you a day filled with happiness, love,
+                laughter and beautiful memories. 🌸
+            </p>
+
+            <p>
+                May all your dreams come true and may your
+                life always be filled with smiles! 💕
+            </p>
+
+            <div class="dolls">💗 🎁 💗 🎁 💗</div>
+
+            <button type="button" onclick="showMemories()">
+                See Our Memories 📸
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3: PHOTO MEMORIES -->
+    <section id="memoryPage" class="page">
+
+        <h1>Our Beautiful Memories 💕</h1>
+
+        <p>Every picture holds a special memory! 🌷</p>
+
+        <div class="single-photo">
+
+            <img
+                id="memoryPhoto"
+                src="./images/photo1.jpeg"
+                alt="Our beautiful memory"
+            >
+
+        </div>
+
+        <p>
+            Memory <span id="photoNumber">1</span> of 6 💗
+        </p>
+
+        <p id="photoQuote">
+            "You make every moment special." 💗
+        </p>
+
+        <div class="memory-buttons">
+
+            <button type="button" onclick="nextPhoto()">
+                Next Photo ➜
+            </button>
+
+            <button
+                type="button"
+                id="arjunaButton"
+                onclick="showPage('arjunaPage')"
+            >
+                Discover Arjuna 🏹
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4: ARJUNA -->
+    <section id="arjunaPage" class="page">
+
+        <h1>🏹 Arjuna — The Great Warrior 🏹</h1>
+
+        <div class="arjuna-image">
+
+            <img
+                src="./images/arjuna.jpg"
+                alt="Arjuna from the Mahabharata"
+            >
+
+        </div>
+
+        <h2>The Warrior of Dharma 🙏</h2>
+
+        <p class="arjuna-quote">
+            "A focused mind, a fearless heart, and a soul devoted to dharma."
+        </p>
+
+        <div class="arjuna-qualities">
+
+            <p>🏹 <strong>Archery:</strong> Master of the Gandiva bow.</p>
+
+            <p>🔥 <strong>Courage:</strong> Fearless in the face of challenges.</p>
+
+            <p>🎯 <strong>Focus:</strong> Unmatched concentration and discipline.</p>
+
+            <p>⚔️ <strong>Strength:</strong> A mighty warrior with great skill.</p>
+
+            <p>🙏 <strong>Devotion:</strong> Guided by Lord Krishna's wisdom.</p>
+
+            <p>🕉️ <strong>Dharma:</strong> Committed to duty and righteousness.</p>
+
+        </div>
+
+        <button
+            type="button"
+            onclick="showPage('memoryPage')"
+        >
+            ← Back to Memories
+        </button>
+
+    </section>
+
+
+    <!-- FLOATING DECORATIONS -->
+    <div class="floating-hearts"> 💕 Ly Cutiee💕</div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="./script.js"></script>
+
+</body>
+</html>

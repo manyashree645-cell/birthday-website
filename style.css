@@ -1,0 +1,291 @@
+
+/* BASIC SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #fff0f6, #ffd1e3);
+    color: #a31555;
+}
+
+/* PAGE SETTINGS */
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 16px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* HEADINGS AND TEXT */
+h1 {
+    color: #d81b60;
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 18px;
+    text-shadow: 2px 2px 5px #ffc1d9;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ad1457;
+}
+
+/* GIFT PAGE */
+.birthday-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gift {
+    width: 180px;
+    height: 190px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 1.5s infinite;
+    transition: transform 0.3s;
+}
+
+.gift:hover {
+    transform: scale(1.08);
+}
+
+.gift-box {
+    font-size: 125px;
+    line-height: 1;
+    filter: drop-shadow(0 8px 8px #e98bb4);
+}
+
+.gift-lid {
+    display: none;
+}
+
+.gift-bow {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    font-size: 42px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* BIRTHDAY WISH PAGE */
+#birthdayMessage {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px 22px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 2px solid #ffb6d0;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.15);
+    animation: appear 0.6s ease;
+}
+
+.dolls {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BUTTONS */
+button {
+    background: linear-gradient(135deg, #ff5c9d, #e91e63);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 18px;
+    box-shadow: 0 5px 12px rgba(216, 27, 96, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 18px rgba(216, 27, 96, 0.3);
+}
+
+/* MEMORIES PAGE */
+#memoryPage h1 {
+    margin-bottom: 8px;
+}
+
+.single-photo {
+    width: min(90vw, 430px);
+    height: min(55vh, 460px);
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border: 3px solid #ff9fc5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(194, 24, 91, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* FLOATING HEARTS */
+.floating-hearts {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: floatHearts 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes floatHearts {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 480px) {
+    #birthdayMessage {
+        padding: 22px 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .dolls {
+        font-size: 26px;
+    }
+
+    .single-photo {
+        height: 50vh;
+    }
+}
+
+/* ARJUNA PAGE */
+#arjunaPage {
+    background: linear-gradient(135deg, #fff1cf, #f8dba0, #fff7e6);
+    color: #5d3510;
+}
+
+#arjunaPage h1 {
+    color: #8b4513;
+    text-shadow: 2px 2px 5px #e9c77b;
+}
+
+#arjunaPage h2 {
+    color: #7b3f00;
+    margin: 15px 0;
+}
+
+.arjuna-image {
+    width: min(85vw, 380px);
+    height: 350px;
+    padding: 8px;
+    background: #fff9e8;
+    border: 3px solid #d4a64a;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #c59a4b66;
+}
+
+.arjuna-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.arjuna-quote {
+    max-width: 600px;
+    font-style: italic;
+    font-weight: bold;
+    color: #7b3f00;
+}
+
+.arjuna-qualities {
+    width: min(95%, 600px);
+    text-align: left;
+    background: #fffaf0cc;
+    padding: 15px 20px;
+    border-radius: 18px;
+    border: 1px solid #e5c16b;
+}
+
+.arjuna-qualities p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+#arjunaPage button {
+    background: linear-gradient(135deg, #b7791f, #805515);
+}
+
+/* FIX: SHOW BOTH MEMORIES BUTTONS */
+#memoryPage button {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    z-index: 5;
+}
